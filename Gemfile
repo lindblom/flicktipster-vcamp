@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'rack-force_domain'
 gem 'nokogiri'
 
 gem 'rails', '3.1.3'

@@ -7,38 +7,40 @@ html
     link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'
     = csrf_meta_tags
   body
-  - unless logged_in?
-    #top-bar
-    		.top-bar-inner
-    			form action="#{login_path}" method="post"
-    				input.login-form.username-form name="login[username]" type="text" placeholder="Username" value="#{session[:login][:username] if session[:login]}"
-    				input.login-form.password-form name="login[password]" type="password" placeholder="Password"
-    				input.login-form-button.button.blue name="login-button" type="submit" value="Login" 
-  #container
-  		.logo
-  			h1 
-  			  | Flicktipster
-  			  span style="font-size: 0.8em;".com
-  		.login-link-container
-  			- unless logged_in?
-  			  a.login-link 
-  				span.login Log in
-  				span.info  [?]
-  			- else
-  			  p.logged-in 
-  			    ' Logged in as #{current_user.username}, #{link_to "log out", logout_path}.
-  		#flash
-  		  - if flash.alert
-  		    .alert
-  		      p = flash[:alert]
-  		  - if flash.notice
-  		    .notice
-  		      p = flash[:notice]
-  		= yield
+    - unless logged_in?
+      #top-bar
+      		.top-bar-inner
+      			form action="#{login_path}" method="post"
+      				input.login-form.username-form name="login[username]" type="text" placeholder="Username" value="#{session[:login][:username] if session[:login]}"
+      				input.login-form.password-form name="login[password]" type="password" placeholder="Password"
+      				input.login-form-button.button.blue name="login-button" type="submit" value="Login" 
+    #container
+    		.logo
+    			h1 
+    			  | Flicktipster
+    			  span style="font-size: 0.8em;".com
+    		.login-link-container
+    			- unless logged_in?
+    			  a.login-link 
+    				span.login Log in
+    				span.info  [?]
+    			- else
+    			  p.logged-in 
+    			    ' Logged in as #{current_user.username}, #{link_to "log out", logout_path}.
+    		#flash
+    		  - if flash.alert
+    		    .alert
+    		      p = flash[:alert]
+    		  - if flash.notice
+    		    .notice
+    		      p = flash[:notice]
+    		= yield
   		
-  #overlay-bg
+    #overlay-bg
 
-  #overlay
-  		#overlay-inner
-  			p To register, just log in with a desired username and password – and a user
-  			   will automatically be created for you
+    #overlay
+    		#overlay-inner
+    			p To register, just log in with a desired username and password – and a user
+    			   will automatically be created for you
+
+    == render partial: "analytics"

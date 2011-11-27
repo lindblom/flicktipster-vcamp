@@ -27591,3 +27591,47 @@ Served asset /pages.css - 304 Not Modified (8ms)
 
 Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
 Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:30:31 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = 'f')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = 'f')[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mRating Load (0.4ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (like IS NOT 'NULL') ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)[0m
+Rendered pages/_feed_item.html.slim (1.7ms)
+Rendered pages/index.html.slim within layouts/application (88.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 145ms (Views: 102.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:30:31 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:30:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:30:31 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:30:31 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:30:31 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:30:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)

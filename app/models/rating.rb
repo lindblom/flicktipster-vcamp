@@ -8,5 +8,5 @@ class Rating < ActiveRecord::Base
   scope :good, where("like = ?", true)
   scope :bad, where("like = ?", false)
   
-  scope :latest, where("like <> '?'", nil).order("created_at DESC").limit(10).includes(:user, :movie)
+  scope :latest, where("like IS NOT '?'", nil).order("created_at DESC").limit(10).includes(:user, :movie)
 end

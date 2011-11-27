@@ -1,0 +1,34 @@
+.youtube
+  iframe width="560" height="315" src="http://www.youtube.com/embed/#{@movie.youtube}?rel=0&amp;hd=1&amp;wmode=Opaque&amp;showinfo=0&amp;iv_load_policy=3" frameborder="0" allowfullscreen>
+	
+.movie-info
+	.con
+		= "#{@movie.bad}"
+	.pro
+		= "#{@movie.good}"
+	h2 = "#{@movie.title} (#{@movie.year})"
+	p = @movie.runtime.to_s + " minutes"
+	p = @movie.description
+
+
+.fetch
+  = link_to "Fetch a new movie", root_path, class: "fetch-movie button orange"
+
+- if logged_in?
+	.express
+		a.show.button.white href="#show" Rate and hide movie
+		.choices
+		  a.vote-up.button.green href="/rate/#{@movie.id}/yes" I&#x27;ve seen it – and liked it
+		  br
+			a.vote-down.button.red href="/rate/#{@movie.id}/no" I&#x27;ve seen it – and didn&#x27;t like it 
+			br
+			a.vote-nothing.button.gray href="/rate/#{@movie.id}/hide" I haven&#x27;t seen it but don&#x27;t show this movie again 
+		- if admin?
+		  = link_to "Delete movie", delete_movie_path(@movie), method: :delete, :class => [:delete, :button, :red]
+		  br
+		  a.bookmarklet href="javascript: var url = document.location.href; var href = 'http://flicktipster.com/'; var urlArray = url.split('/'); var imdbCode = urlArray[4]; window.open(href+'add/'+imdbCode,'flicktipster','toolbar=0,resizable=1,scrollbars=0,status=1,width=490,height=400');"
+		  	' Add to Flicktipster
+		  br
+		  	
+.feed 
+	= render partial: "feed_item", collection: @feed, as: :feed_item

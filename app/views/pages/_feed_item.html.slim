@@ -1,0 +1,8 @@
+.feed-item
+	p data-youtube="#{feed_item.movie.youtube}" data-title="#{feed_item.movie.title}" data-runtime="#{feed_item.movie.runtime}" data-description="#{feed_item.movie.description}"
+		span class="#{feed_item_class(feed_item.like)}"
+		= feed_item.movie.title
+		small
+			span.username
+				=' feed_item.user.username
+			=' time_ago_in_words(feed_item.created_at, true) + " ago"

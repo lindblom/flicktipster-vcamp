@@ -27392,3 +27392,202 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:09:25 +0100
 Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:26:43 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" LIMIT 1 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 'f')[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (like IS NOT 'NULL') ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)[0m
+Rendered pages/_feed_item.html.slim (6.0ms)
+Rendered pages/index.html.slim within layouts/application (299.0ms)
+Compiled application.css  (3ms)  (pid 87104)
+Compiled buttons.css  (42ms)  (pid 87104)
+Compiled no_movies.css  (1ms)  (pid 87104)
+Compiled pages.css  (0ms)  (pid 87104)
+Compiled application.js  (14ms)  (pid 87104)
+Compiled jquery.js  (142ms)  (pid 87104)
+Compiled jquery_ujs.js  (0ms)  (pid 87104)
+Compiled pages.js  (262ms)  (pid 87104)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 1362ms (Views: 1144.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:26:46 +0100
+Served asset /no_movies.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:26:46 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:26:46 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:26:54 +0100
+Served asset /buttons.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:26:55 +0100
+Served asset /pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:26:55 +0100
+Served asset /pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:27:03 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = 'f')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = 'f')
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (like IS NOT 'NULL') ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)
+Rendered pages/_feed_item.html.slim (1.6ms)
+Rendered pages/index.html.slim within layouts/application (88.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 147ms (Views: 99.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:04 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:04 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:04 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:04 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:04 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:04 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-11-27 05:27:12 +0100
+  Processing by PagesController#login as HTML
+  Parameters: {"login"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "login-button"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (UPPER(username) = 'ADMIN') LIMIT 1[0m
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 142ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:27:12 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 'f')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 'f')
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 't')
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (like IS NOT 'NULL') ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)[0m
+Rendered pages/_feed_item.html.slim (1.5ms)
+Rendered pages/index.html.slim within layouts/application (30.9ms)
+Completed 200 OK in 138ms (Views: 40.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:13 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /pages.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:13 +0100
+Served asset /buttons.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /no_movies.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:13 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
+  Processing by PagesController#logout as HTML
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 'f')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 'f')
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (like IS NOT 'NULL') ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)
+Rendered pages/_feed_item.html.slim (1.5ms)
+Rendered pages/index.html.slim within layouts/application (84.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 136ms (Views: 94.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
+Served asset /pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+Served asset /pages.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:27:18 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)

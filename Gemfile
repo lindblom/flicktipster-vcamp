@@ -29,7 +29,7 @@ gem 'nokogiri'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
-gem 'unicorn', group: :development
+gem 'thin', group: :development
 
 # Deploy with Capistrano
 # gem 'capistrano'

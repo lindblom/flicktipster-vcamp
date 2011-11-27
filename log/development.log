@@ -27679,3 +27679,2030 @@ Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:43:40 +0100
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:43:40 +0100
 Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:48:44 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" LIMIT 1 OFFSET 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 'f')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 'f')[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)[0m
+Rendered pages/_feed_item.html.slim (1.6ms)
+Rendered pages/index.html.slim within layouts/application (43.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 143ms (Views: 54.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:44 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:44 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:44 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:44 +0100
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:44 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:44 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:48:53 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 'f')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 'f')
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (like = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)
+Rendered pages/_feed_item.html.slim (1.8ms)
+Rendered pages/index.html.slim within layouts/application (42.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 142ms (Views: 54.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:53 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:53 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:53 +0100
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:53 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+Served asset /no_movies.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:53 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:48:56 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" LIMIT 1 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 'f')[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)[0m
+Rendered pages/_feed_item.html.slim (1.5ms)
+Rendered pages/index.html.slim within layouts/application (83.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 135ms (Views: 93.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:57 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:57 +0100
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:57 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:57 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:57 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:48:59 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 'f')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (4, 1)[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3, 2)
+Rendered pages/_feed_item.html.slim (3.7ms)
+Rendered pages/index.html.slim within layouts/application (88.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 144ms (Views: 99.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:59 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:59 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:59 +0100
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:48:59 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:59 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:48:59 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:49:25 +0100
+  Processing by PagesController#index as HTML
+PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+Completed 500 Internal Server Error in 220ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/controllers/application_controller.rb:12:in `logged_in?'
+  app/controllers/pages_controller.rb:6:in `index'
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+  [1m[36m (0.1ms)[0m  [1mSHOW search_path[0m
+  [1m[35m (18.4ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying(255), "youtube" character varying(255), "imdb" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp, "year" integer, "runtime" integer) 
+  [1m[36m (6.8ms)[0m  [1mCREATE TABLE "ratings" ("id" serial primary key, "user_id" integer, "movie_id" integer, "like" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp, "admin" boolean DEFAULT 'f') 
+  [1m[36m (3.7ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35m (3.0ms)[0m  CREATE INDEX "index_users_on_username" ON "users" ("username")
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (4.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (8.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111126223252')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111126085330')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111126093329')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111126143403')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111126174348')[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.4ms)[0m  INSERT INTO "movies" ("created_at", "description", "imdb", "runtime", "title", "updated_at", "year", "youtube") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["description", "Some alian movie"], ["imdb", nil], ["runtime", 154], ["title", "Men in black"], ["updated_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["year", 1997], ["youtube", "YxQS2taMOl4"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "imdb", "runtime", "title", "updated_at", "year", "youtube") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["description", "Some alian movie 2"], ["imdb", nil], ["runtime", 154], ["title", "Men in black 2"], ["updated_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["year", 2000], ["youtube", "p4NJHqoojOU"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "imdb", "runtime", "title", "updated_at", "year", "youtube") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["description", "Some alian movie 3"], ["imdb", nil], ["runtime", 154], ["title", "Men in black 3"], ["updated_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["year", 2012], ["youtube", "LPPqZh-xh7Y"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('user') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("admin", "created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["admin", false], ["created_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["password_digest", "$2a$10$lpfyu0Wm1wOXt26Zn79h0O6VkxAOf7eAlajMvBz4t4Gacd9Jw3p1q"], ["updated_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["username", "user"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('admin') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("admin", "created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["admin", true], ["created_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["password_digest", "$2a$10$/z9sp.yzEkeymrBFB0FWy./50NwCZGBeQ9YkONhkmx/W96U6urq96"], ["updated_at", Sun, 27 Nov 2011 04:50:07 UTC +00:00], ["username", "admin"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:50:11 +0100
+  Processing by PagesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSHOW search_path[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (1.3ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 'f')[0m
+PGError: ERROR:  syntax error at or near "="
+LINE 1: ...M "ratings"  WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+                                                                 ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+Rendered pages/index.html.slim within layouts/application (187.8ms)
+Completed 500 Internal Server Error in 340ms
+
+ActionView::Template::Error (PGError: ERROR:  syntax error at or near "="
+LINE 1: ...M "ratings"  WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+                                                                 ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 2 AND (like = 'f')):
+    3: 	
+    4: .movie-info
+    5: 	.con
+    6: 		= "#{@movie.bad}"
+    7: 	.pro
+    8: 		= "#{@movie.good}"
+    9: 	h2 = "#{@movie.title} (#{@movie.year})"
+  app/models/movie.rb:9:in `bad'
+  app/views/pages/index.html.slim:6:in `_app_views_pages_index_html_slim___3363038346186021067_2177902040'
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:52:45 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 2
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (like = ''f'')[0m
+PGError: ERROR:  syntax error at or near "="
+LINE 1: ..."ratings"  WHERE "ratings"."movie_id" = 3 AND (like = ''f'')
+                                                               ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 3 AND (like = ''f'')
+Rendered pages/index.html.slim within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 65ms
+
+ActionView::Template::Error (PGError: ERROR:  syntax error at or near "="
+LINE 1: ..."ratings"  WHERE "ratings"."movie_id" = 3 AND (like = ''f'')
+                                                               ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 3 AND (like = ''f'')):
+    3: 	
+    4: .movie-info
+    5: 	.con
+    6: 		= "#{@movie.bad}"
+    7: 	.pro
+    8: 		= "#{@movie.good}"
+    9: 	h2 = "#{@movie.title} (#{@movie.year})"
+  app/models/movie.rb:9:in `bad'
+  app/views/pages/index.html.slim:6:in `_app_views_pages_index_html_slim___3363038346186021067_2177902040'
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:53:03 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like = 'f')[0m
+PGError: ERROR:  syntax error at or near "="
+LINE 1: ...M "ratings"  WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+                                                                 ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+Rendered pages/index.html.slim within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (PGError: ERROR:  syntax error at or near "="
+LINE 1: ...M "ratings"  WHERE "ratings"."movie_id" = 2 AND (like = 'f')
+                                                                 ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 2 AND (like = 'f')):
+    3: 	
+    4: .movie-info
+    5: 	.con
+    6: 		= "#{@movie.bad}"
+    7: 	.pro
+    8: 		= "#{@movie.good}"
+    9: 	h2 = "#{@movie.title} (#{@movie.year})"
+  app/models/movie.rb:9:in `bad'
+  app/views/pages/index.html.slim:6:in `_app_views_pages_index_html_slim___3363038346186021067_2177902040'
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:53:40 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (like IS 'f')[0m
+PGError: ERROR:  syntax error at or near "IS"
+LINE 1: ... "ratings"  WHERE "ratings"."movie_id" = 2 AND (like IS 'f')
+                                                                ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 2 AND (like IS 'f')
+Rendered pages/index.html.slim within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 107ms
+
+ActionView::Template::Error (PGError: ERROR:  syntax error at or near "IS"
+LINE 1: ... "ratings"  WHERE "ratings"."movie_id" = 2 AND (like IS 'f')
+                                                                ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 2 AND (like IS 'f')):
+    3: 	
+    4: .movie-info
+    5: 	.con
+    6: 		= "#{@movie.bad}"
+    7: 	.pro
+    8: 		= "#{@movie.good}"
+    9: 	h2 = "#{@movie.title} (#{@movie.year})"
+  app/models/movie.rb:9:in `bad'
+  app/views/pages/index.html.slim:6:in `_app_views_pages_index_html_slim___3363038346186021067_2177902040'
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:53:56 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 2
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS 'f')[0m
+PGError: ERROR:  syntax error at or near "'f'"
+LINE 1: ...s"  WHERE "ratings"."movie_id" = 3 AND (ratings.like IS 'f')
+                                                                   ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 3 AND (ratings.like IS 'f')
+Rendered pages/index.html.slim within layouts/application (57.2ms)
+Completed 500 Internal Server Error in 102ms
+
+ActionView::Template::Error (PGError: ERROR:  syntax error at or near "'f'"
+LINE 1: ...s"  WHERE "ratings"."movie_id" = 3 AND (ratings.like IS 'f')
+                                                                   ^
+: SELECT COUNT(*) FROM "ratings"  WHERE "ratings"."movie_id" = 3 AND (ratings.like IS 'f')):
+    3: 	
+    4: .movie-info
+    5: 	.con
+    6: 		= "#{@movie.bad}"
+    7: 	.pro
+    8: 		= "#{@movie.good}"
+    9: 	h2 = "#{@movie.title} (#{@movie.year})"
+  app/models/movie.rb:9:in `bad'
+  app/views/pages/index.html.slim:6:in `_app_views_pages_index_html_slim___3363038346186021067_2177902040'
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:54:18 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (1.4ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mRating Load (0.6ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+PGError: ERROR:  syntax error at or near "IS"
+LINE 1: SELECT  "ratings".* FROM "ratings"  WHERE (like IS NOT NULL)...
+                                                        ^
+: SELECT  "ratings".* FROM "ratings"  WHERE (like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+Rendered pages/index.html.slim within layouts/application (33.2ms)
+Completed 500 Internal Server Error in 82ms
+
+ActionView::Template::Error (PGError: ERROR:  syntax error at or near "IS"
+LINE 1: SELECT  "ratings".* FROM "ratings"  WHERE (like IS NOT NULL)...
+                                                        ^
+: SELECT  "ratings".* FROM "ratings"  WHERE (like IS NOT NULL) ORDER BY created_at DESC LIMIT 10):
+    31: 		  br
+    32: 		  	
+    33: .feed 
+    34: 	= render partial: "feed_item", collection: @feed, as: :feed_item
+  app/views/pages/index.html.slim:34:in `_app_views_pages_index_html_slim___3363038346186021067_2177902040'
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:54:32 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" LIMIT 1 OFFSET 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mRating Load (0.7ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+Rendered pages/_feed_item.html.slim (0.0ms)
+Rendered pages/index.html.slim within layouts/application (31.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 151ms (Views: 79.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:33 +0100
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:33 +0100
+Served asset /no_movies.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (69ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:40 +0100
+Served asset /pages.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:41 +0100
+Served asset /buttons.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:41 +0100
+Served asset /pages.js - 304 Not Modified (6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-11-27 05:54:51 +0100
+  Processing by PagesController#login as HTML
+  Parameters: {"login"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "login-button"=>"Login"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE (UPPER(username) = 'ADMIN') LIMIT 1
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 146ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:54:51 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" LIMIT 1 OFFSET 2[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS false)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 3 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+Rendered pages/_feed_item.html.slim (0.0ms)
+Rendered pages/index.html.slim within layouts/application (20.6ms)
+Completed 200 OK in 127ms (Views: 31.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:52 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:52 +0100
+Served asset /pages.css - 304 Not Modified (1ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:52 +0100
+Served asset /buttons.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:52 +0100
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:52 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/rate/3/no" for 127.0.0.1 at 2011-11-27 05:54:58 +0100
+  Processing by PagesController#rate as HTML
+  Parameters: {"id"=>"3", "like"=>"no"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 3 LIMIT 1
+  [1m[36mRating Load (0.4ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = 2 AND "ratings"."movie_id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "ratings" ("created_at", "like", "movie_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Sun, 27 Nov 2011 04:54:58 UTC +00:00], ["like", false], ["movie_id", 3], ["updated_at", Sun, 27 Nov 2011 04:54:58 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 133ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:54:58 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.2ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3))
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3)) LIMIT 1 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (5.1ms)
+Rendered pages/index.html.slim within layouts/application (88.5ms)
+Completed 200 OK in 160ms (Views: 97.8ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:58 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:58 +0100
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:58 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:54:58 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:54:58 +0100
+Served asset /buttons.css - 304 Not Modified (2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-11-27 05:55:05 +0100
+  Processing by PagesController#logout as HTML
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:55:05 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mRating Load (0.4ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (42.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 133ms (Views: 89.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:05 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:05 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:05 +0100
+Served asset /no_movies.css - 304 Not Modified (4ms)
+Served asset /pages.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:05 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:05 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-11-27 05:55:10 +0100
+  Processing by PagesController#login as HTML
+  Parameters: {"login"=>{"username"=>"sven", "password"=>"[FILTERED]"}, "login-button"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (UPPER(username) = 'SVEN') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (UPPER(username) = 'SVEN')[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('sven') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 252ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:55:10 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" LIMIT 1 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mRating Load (0.4ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (43.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 95ms (Views: 49.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:11 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:11 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:11 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:11 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-11-27 05:55:13 +0100
+  Processing by PagesController#login as HTML
+  Parameters: {"login"=>{"username"=>"sven", "password"=>"[FILTERED]"}, "login-button"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (UPPER(username) = 'SVEN') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (UPPER(username) = 'SVEN')[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('sven') LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("admin", "created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["admin", false], ["created_at", Sun, 27 Nov 2011 04:55:14 UTC +00:00], ["password_digest", "$2a$10$XmU6wwR7IX76QNRXd4Pj0uAs8RLILLgi3hC37Xit6utSUEvRvTrpa"], ["updated_at", Sun, 27 Nov 2011 04:55:14 UTC +00:00], ["username", "sven"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 149ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:55:14 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 3)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (32.5ms)
+Completed 200 OK in 141ms (Views: 85.7ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:14 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:14 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:14 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:14 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:14 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-11-27 05:55:18 +0100
+  Processing by PagesController#logout as HTML
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:55:18 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" [0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" LIMIT 1 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (42.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 138ms (Views: 92.6ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:18 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:18 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:18 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:18 +0100
+Served asset /pages.js - 304 Not Modified (2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-11-27 05:55:36 +0100
+  Processing by PagesController#login as HTML
+  Parameters: {"login"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "login-button"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (UPPER(username) = 'ADMIN') LIMIT 1[0m
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 140ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:55:36 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.2ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3))
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3)) LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (0.5ms)
+Rendered pages/index.html.slim within layouts/application (22.6ms)
+Completed 200 OK in 143ms (Views: 31.7ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:37 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:37 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:37 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:55:37 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:55:37 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/add/tt0092675" for 127.0.0.1 at 2011-11-27 05:56:13 +0100
+  Processing by PagesController#add_movie as HTML
+  Parameters: {"imdb_id"=>"tt0092675"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMovie Load (0.9ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."imdb" = 'tt0092675' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "movies" ("created_at", "description", "imdb", "runtime", "title", "updated_at", "year", "youtube") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Sun, 27 Nov 2011 04:56:16 UTC +00:00], ["description", " Frank Dux has spent most his life being trained by Tanaka to participate in the Kumite, the ultimate martial arts tournament... See full summary » "], ["imdb", "tt0092675"], ["runtime", 92], ["title", "Utmaningen"], ["updated_at", Sun, 27 Nov 2011 04:56:16 UTC +00:00], ["year", 1988], ["youtube", "AnmIeRpH5PY"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."imdb" = 'tt0092675' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 4 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 4 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 4 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 4 AND (ratings.like IS true)
+  [1m[36mRating Load (0.4ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (46.8ms)
+Completed 200 OK in 2600ms (Views: 57.1ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:56:16 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:56:16 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:56:16 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:56:16 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:56:16 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:56:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/remove/4" for 127.0.0.1 at 2011-11-27 05:56:30 +0100
+  Processing by PagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+AvaU5NnE444o+mRBU9T7iGzOvDNWcvS9pZFfZr0jUY=", "id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMovie Load (2.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRating Load (0.6ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE "ratings"."movie_id" = 4[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = $1  [["id", 4]]
+  [1m[36m (163.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 355ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:56:30 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.7ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3))
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3)) LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (1.4ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (0.7ms)
+Rendered pages/index.html.slim within layouts/application (28.9ms)
+Completed 200 OK in 142ms (Views: 40.6ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:56:30 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:56:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:56:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:56:30 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:56:30 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:56:30 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/add/tt0113481" for 127.0.0.1 at 2011-11-27 05:57:00 +0100
+  Processing by PagesController#add_movie as HTML
+  Parameters: {"imdb_id"=>"tt0113481"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."imdb" = 'tt0113481' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "imdb", "runtime", "title", "updated_at", "year", "youtube") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Sun, 27 Nov 2011 04:57:02 UTC +00:00], ["description", " A data courier, carrying a data package literally inside his head too large to hold for long, must deliver it before he dies from it. "], ["imdb", "tt0113481"], ["runtime", 103], ["title", "Johnny Mnemonic"], ["updated_at", Sun, 27 Nov 2011 04:57:02 UTC +00:00], ["year", 1995], ["youtube", "QComFWf0DUo"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."imdb" = 'tt0113481' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 5 AND (ratings.like IS true)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (96.5ms)
+Completed 200 OK in 2262ms (Views: 103.8ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:57:03 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:57:03 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:57:03 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:57:03 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+Served asset /pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:57:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:57:03 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/rate/5/hide" for 127.0.0.1 at 2011-11-27 05:57:14 +0100
+  Processing by PagesController#rate as HTML
+  Parameters: {"id"=>"5", "like"=>"hide"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMovie Load (1.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = 5 LIMIT 1[0m
+  [1m[35mRating Load (0.4ms)[0m  SELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = 2 AND "ratings"."movie_id" = 5 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ratings" ("created_at", "like", "movie_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Sun, 27 Nov 2011 04:57:14 UTC +00:00], ["like", nil], ["movie_id", 5], ["updated_at", Sun, 27 Nov 2011 04:57:14 UTC +00:00], ["user_id", 2]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://flicktipster.dev/
+Completed 302 Found in 86ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 05:57:14 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mRating Load (0.2ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (1.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (28.0ms)
+Completed 200 OK in 106ms (Views: 38.9ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 05:57:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 05:57:15 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 05:57:15 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 05:57:15 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 05:57:15 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 05:57:15 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:05:27 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.2ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (0.5ms)
+Rendered pages/index.html.slim within layouts/application (23.8ms)
+Completed 200 OK in 168ms (Views: 48.6ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 06:05:27 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 06:05:27 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 06:05:27 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 06:05:27 +0100
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 06:05:27 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 06:05:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/logo.png" for 127.0.0.1 at 2011-11-27 06:05:28 +0100
+Served asset /images/logo.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/logo.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:05:49 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.5ms)
+Rendered pages/index.html.slim within layouts/application (23.1ms)
+ERROR: compiling _app_views_layouts_application_html_slim__215119874639028667_2170729140 RAISED /Users/Christopher/dEdge/projects/movieproject/flicktipster.com/app/views/layouts/application.html.slim:8: syntax error, unexpected '='
+...mple::Utils.escape_html_safe((= asset_path "images/logo.png"...
+...                               ^
+Function body:           def _app_views_layouts_application_html_slim__215119874639028667_2170729140(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActiveSupport::SafeBuffer.new; @output_buffer.safe_concat(("<!DOCTYPE html><html><head><title>Flicktipster</title>")); 
+; 
+; 
+; 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((stylesheet_link_tag    "application"))).to_s)); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((javascript_include_tag "application"))).to_s)); 
+; @output_buffer.safe_concat(("<link href=\"http://fonts.googleapis.com/css?family=Merienda+One\" rel=\"stylesheet\" type=\"text/css\" /><link")); 
+; _temple_html_attributemerger1 = ActiveSupport::SafeBuffer.new; _temple_html_attributemerger1.safe_concat(((::Temple::Utils.escape_html_safe((= asset_path "images/logo.png"))).to_s)); _temple_html_attributemerger1; if !_temple_html_attributemerger1.empty?; @output_buffer.safe_concat((" href=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger1).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((" rel=\"shortcut icon\" />")); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((csrf_meta_tags))).to_s)); 
+; @output_buffer.safe_concat(("</head><body></body>")); 
+; unless logged_in?; 
+; @output_buffer.safe_concat(("<div id=\"top-bar\"><div class=\"top-bar-inner\"><form")); 
+; 
+; _temple_html_attributemerger2 = ActiveSupport::SafeBuffer.new; _temple_html_attributemerger2.safe_concat(((::Temple::Utils.escape_html_safe((login_path))).to_s)); _temple_html_attributemerger2; if !_temple_html_attributemerger2.empty?; @output_buffer.safe_concat((" action=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger2).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((" method=\"post\"><input class=\"login-form username-form\" name=\"login[username]\" placeholder=\"Username\" type=\"text\"")); 
+; _temple_html_attributemerger3 = ActiveSupport::SafeBuffer.new; _temple_html_attributemerger3.safe_concat(((::Temple::Utils.escape_html_safe((session[:login][:username] if session[:login]))).to_s)); _temple_html_attributemerger3; if !_temple_html_attributemerger3.empty?; @output_buffer.safe_concat((" value=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger3).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((" /><input class=\"login-form password-form\" name=\"login[password]\" placeholder=\"Password\" type=\"password\" /><input class=\"login-form-button button blue\" name=\"login-button\" type=\"submit\" value=\"Login\" /></form></div></div>")); 
+; 
+; 
+; end; @output_buffer.safe_concat(("<div id=\"container\"><div class=\"logo\"><h1>Flicktipster<span style=\"font-size: 0.8em;\">.com</span></h1></div><div class=\"login-link-container\">")); 
+; 
+; 
+; 
+; 
+; 
+; unless logged_in?; 
+; @output_buffer.safe_concat(("<a class=\"login-link\"><span class=\"login\">Log in</span><span class=\"info\"> [?]</span></a>")); 
+; 
+; 
+; else; 
+; @output_buffer.safe_concat(("<p class=\"logged-in\">Logged in as ")); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((current_user.username))).to_s)); @output_buffer.safe_concat((", ")); @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((link_to "log out", logout_path))).to_s)); @output_buffer.safe_concat((". </p>")); 
+; end; @output_buffer.safe_concat(("</div><div id=\"flash\">")); 
+; if flash.alert; 
+; @output_buffer.safe_concat(("<div class=\"alert\"><p>")); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((flash[:alert]))).to_s)); 
+; @output_buffer.safe_concat(("</p></div>")); end; if flash.notice; 
+; @output_buffer.safe_concat(("<div class=\"notice\"><p>")); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((flash[:notice]))).to_s)); 
+; @output_buffer.safe_concat(("</p></div>")); end; @output_buffer.safe_concat(("</div>")); @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((yield))).to_s)); 
+; 
+; @output_buffer.safe_concat(("</div><div id=\"overlay-bg\"></div><div id=\"overlay\"><div id=\"overlay-inner\"><p>To register, just log in with a desired username and password – and a user\n will automatically be created for you</p></div></div></html>")); 
+; 
+; 
+; 
+; 
+; 
+; @output_buffer
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/Christopher/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:407:in `_run__4391463901479081900__process_action__939377481812963469__callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:146:in `handle'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:99:in `rescue in block (2 levels) in start'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:96:in `block (2 levels) in start'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:86:in `each'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:66:in `loop'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:66:in `start'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:13:in `run'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/bin/nack_worker:4:in `<main>'
+Completed 500 Internal Server Error in 176ms
+
+ActionView::Template::Error (/Users/Christopher/dEdge/projects/movieproject/flicktipster.com/app/views/layouts/application.html.slim:8: syntax error, unexpected '='
+...mple::Utils.escape_html_safe((= asset_path "images/logo.png"...
+...                               ^):
+    5:     = stylesheet_link_tag    "application"
+    6:     = javascript_include_tag "application"
+    7:     link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'
+    8:     link rel="shortcut icon" href="#{= asset_path "images/logo.png"}"
+    9:     = csrf_meta_tags
+    10:   body
+    11:   - unless logged_in?
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:05:57 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.2ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.6ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (0.5ms)
+Rendered pages/index.html.slim within layouts/application (23.6ms)
+ERROR: compiling _app_views_layouts_application_html_slim__215119874639028667_2170729140 RAISED /Users/Christopher/dEdge/projects/movieproject/flicktipster.com/app/views/layouts/application.html.slim:8: syntax error, unexpected '='
+...mple::Utils.escape_html_safe((= asset_path "images/logo.png"...
+...                               ^
+Function body:           def _app_views_layouts_application_html_slim__215119874639028667_2170729140(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActiveSupport::SafeBuffer.new; @output_buffer.safe_concat(("<!DOCTYPE html><html><head><title>Flicktipster</title>")); 
+; 
+; 
+; 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((stylesheet_link_tag    "application"))).to_s)); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((javascript_include_tag "application"))).to_s)); 
+; @output_buffer.safe_concat(("<link href=\"http://fonts.googleapis.com/css?family=Merienda+One\" rel=\"stylesheet\" type=\"text/css\" /><link")); 
+; _temple_html_attributemerger1 = ActiveSupport::SafeBuffer.new; _temple_html_attributemerger1.safe_concat(((::Temple::Utils.escape_html_safe((= asset_path "images/logo.png"))).to_s)); _temple_html_attributemerger1; if !_temple_html_attributemerger1.empty?; @output_buffer.safe_concat((" href=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger1).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((" rel=\"shortcut icon\" />")); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((csrf_meta_tags))).to_s)); 
+; @output_buffer.safe_concat(("</head><body></body>")); 
+; unless logged_in?; 
+; @output_buffer.safe_concat(("<div id=\"top-bar\"><div class=\"top-bar-inner\"><form")); 
+; 
+; _temple_html_attributemerger2 = ActiveSupport::SafeBuffer.new; _temple_html_attributemerger2.safe_concat(((::Temple::Utils.escape_html_safe((login_path))).to_s)); _temple_html_attributemerger2; if !_temple_html_attributemerger2.empty?; @output_buffer.safe_concat((" action=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger2).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((" method=\"post\"><input class=\"login-form username-form\" name=\"login[username]\" placeholder=\"Username\" type=\"text\"")); 
+; _temple_html_attributemerger3 = ActiveSupport::SafeBuffer.new; _temple_html_attributemerger3.safe_concat(((::Temple::Utils.escape_html_safe((session[:login][:username] if session[:login]))).to_s)); _temple_html_attributemerger3; if !_temple_html_attributemerger3.empty?; @output_buffer.safe_concat((" value=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger3).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((" /><input class=\"login-form password-form\" name=\"login[password]\" placeholder=\"Password\" type=\"password\" /><input class=\"login-form-button button blue\" name=\"login-button\" type=\"submit\" value=\"Login\" /></form></div></div>")); 
+; 
+; 
+; end; @output_buffer.safe_concat(("<div id=\"container\"><div class=\"logo\"><h1>Flicktipster<span style=\"font-size: 0.8em;\">.com</span></h1></div><div class=\"login-link-container\">")); 
+; 
+; 
+; 
+; 
+; 
+; unless logged_in?; 
+; @output_buffer.safe_concat(("<a class=\"login-link\"><span class=\"login\">Log in</span><span class=\"info\"> [?]</span></a>")); 
+; 
+; 
+; else; 
+; @output_buffer.safe_concat(("<p class=\"logged-in\">Logged in as ")); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((current_user.username))).to_s)); @output_buffer.safe_concat((", ")); @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((link_to "log out", logout_path))).to_s)); @output_buffer.safe_concat((". </p>")); 
+; end; @output_buffer.safe_concat(("</div><div id=\"flash\">")); 
+; if flash.alert; 
+; @output_buffer.safe_concat(("<div class=\"alert\"><p>")); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((flash[:alert]))).to_s)); 
+; @output_buffer.safe_concat(("</p></div>")); end; if flash.notice; 
+; @output_buffer.safe_concat(("<div class=\"notice\"><p>")); 
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((flash[:notice]))).to_s)); 
+; @output_buffer.safe_concat(("</p></div>")); end; @output_buffer.safe_concat(("</div>")); @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((yield))).to_s)); 
+; 
+; @output_buffer.safe_concat(("</div><div id=\"overlay-bg\"></div><div id=\"overlay\"><div id=\"overlay-inner\"><p>To register, just log in with a desired username and password – and a user\n will automatically be created for you</p></div></div></html>")); 
+; 
+; 
+; 
+; 
+; 
+; @output_buffer
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/Christopher/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:407:in `_run__4391463901479081900__process_action__939377481812963469__callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+/Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:146:in `handle'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:99:in `rescue in block (2 levels) in start'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:96:in `block (2 levels) in start'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:86:in `each'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:66:in `loop'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:66:in `start'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/lib/nack/server.rb:13:in `run'
+/Users/Christopher/Library/Application Support/Pow/Versions/0.3.2/node_modules/nack/bin/nack_worker:4:in `<main>'
+Completed 500 Internal Server Error in 151ms
+
+ActionView::Template::Error (/Users/Christopher/dEdge/projects/movieproject/flicktipster.com/app/views/layouts/application.html.slim:8: syntax error, unexpected '='
+...mple::Utils.escape_html_safe((= asset_path "images/logo.png"...
+...                               ^):
+    5:     = stylesheet_link_tag    "application"
+    6:     = javascript_include_tag "application"
+    7:     link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'
+    8:     link rel="shortcut icon" href="#{= asset_path "images/logo.png"}"
+    9:     = csrf_meta_tags
+    10:   body
+    11:   - unless logged_in?
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:08:25 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mRating Load (0.2ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (26.2ms)
+Completed 200 OK in 119ms (Views: 48.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 06:08:25 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 06:08:25 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 06:08:25 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 06:08:25 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 06:08:25 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 06:08:25 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2011-11-27 06:08:26 +0100
+Served asset /favicon.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2011-11-27 06:08:36 +0100
+Served asset /favicon.png - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2011-11-27 06:09:28 +0100
+Served asset /favicon.png - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:09:34 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.6ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (0.5ms)
+Rendered pages/index.html.slim within layouts/application (22.4ms)
+Completed 200 OK in 101ms (Views: 32.1ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:34 +0100
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:34 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:34 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:34 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+Compiled application.css  (4ms)  (pid 87809)
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 06:09:34 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 06:09:34 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 06:09:35 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-27 06:09:35 +0100
+Compiled application.js  (4ms)  (pid 87809)
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2011-11-27 06:09:35 +0100
+Served asset /favicon.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:09:44 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mRating Load (1.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (26.4ms)
+Completed 200 OK in 117ms (Views: 36.7ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:44 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 06:09:44 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:45 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:45 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:45 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 06:09:45 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-27 06:09:45 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 06:09:45 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2011-11-27 06:09:45 +0100
+Served asset /favicon.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 06:09:53 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2011-11-27 06:10:00 +0100
+Served asset /favicon.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:10:24 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.2ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (0.5ms)
+Rendered pages/index.html.slim within layouts/application (22.5ms)
+Completed 200 OK in 108ms (Views: 43.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/images/favicon.png" for 127.0.0.1 at 2011-11-27 06:10:30 +0100
+Served asset /images/favicon.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:11:10 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mRating Load (0.2ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (23.0ms)
+Completed 200 OK in 95ms (Views: 32.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/assets/images/favicon.png" for 127.0.0.1 at 2011-11-27 06:11:12 +0100
+Served asset /images/favicon.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/assets/images/favicon.png" for 127.0.0.1 at 2011-11-27 06:11:19 +0100
+Served asset /images/favicon.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:11:22 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.6ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (1.7ms)
+Rendered pages/index.html.slim within layouts/application (25.4ms)
+Completed 200 OK in 111ms (Views: 46.9ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-27 06:11:23 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 06:11:23 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 06:11:23 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 06:11:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 06:11:23 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 06:11:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 06:11:23 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-27 06:11:23 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2011-11-27 06:11:24 +0100
+Served asset /favicon.png - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:12:55 +0100
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mRating Load (0.2ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS false)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 2 AND (ratings.like IS true)
+  [1m[36mRating Load (0.3ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)[0m
+Rendered pages/_feed_item.html.slim (0.6ms)
+Rendered pages/index.html.slim within layouts/application (22.2ms)
+Completed 200 OK in 105ms (Views: 43.0ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 06:12:56 +0100
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 06:12:56 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 06:12:56 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-27 06:12:56 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 06:12:56 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 06:12:56 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-27 06:12:56 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 06:12:56 +0100
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/favicon.png" for 127.0.0.1 at 2011-11-27 06:12:57 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/favicon.png" for 127.0.0.1 at 2011-11-27 06:13:01 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-27 06:13:14 +0100
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mRating Load (0.2ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (user_id = 2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE (user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (user_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (id not in (3,5))
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (id not in (3,5)) LIMIT 1 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS false)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."movie_id" = 1 AND (ratings.like IS true)[0m
+  [1m[35mRating Load (0.3ms)[0m  SELECT "ratings".* FROM "ratings" WHERE (ratings.like IS NOT NULL) ORDER BY created_at DESC LIMIT 10
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (3)
+Rendered pages/_feed_item.html.slim (0.5ms)
+Rendered pages/index.html.slim within layouts/application (22.6ms)
+Completed 200 OK in 106ms (Views: 43.6ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+
+
+Started GET "/assets/no_movies.css?body=1" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+Served asset /no_movies.css - 304 Not Modified (0ms)
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/favicon.png" for 127.0.0.1 at 2011-11-27 06:13:15 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/favicon.png" for 127.0.0.1 at 2011-11-27 06:13:21 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  
+
+Rendered /Users/Christopher/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)

@@ -9,6 +9,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'pg', group: :production
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,7 +20,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'temple', "0.3.4"
+gem 'temple', git: "git://github.com/judofyr/temple.git"
 gem 'slim'
 gem 'jquery-rails'
 gem 'nokogiri'
@@ -27,7 +29,7 @@ gem 'nokogiri'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn', group: :development
 
 # Deploy with Capistrano
 # gem 'capistrano'
